@@ -22,6 +22,12 @@ REQUIRED SECTIONS:
 After you're finished please remove all the comments and instructions!
 -->
 
+<div align="center">
+
+  <h3><b>Leaderboard</b></h3>
+
+</div>
+
 
 <!-- TABLE OF CONTENTS -->
 
