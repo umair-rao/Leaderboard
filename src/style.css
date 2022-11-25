@@ -17,6 +17,7 @@
   height: 30px;
   margin-left: 30px;
   margin-top: 20px;
+  cursor: pointer;
 }
 
 .recent-scores {
@@ -28,6 +29,15 @@
 .score-list {
   border: 2px solid black;
   width: 300px;
+}
+
+.score-list ul {
+  padding-left: 10px;
+}
+
+.score-list li {
+  list-style-type: none;
+  margin-top: 12px;
 }
 
 .add-score input {
