@@ -4,6 +4,8 @@ import displayScores from './scoresList.js';
 const refresh = document.querySelector('#refresh-btn');
 const form = document.querySelector('form');
 
+// Get data from API
+
 const getScores = async () => {
   await fetch(
     'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/sr5jjs9jvWKzJUYcqGWW/scores',
@@ -17,6 +19,8 @@ const getScores = async () => {
     });
 };
 
+// Enter/Post data to the API
+
 const saveList = async (entry) => {
   await fetch(
     'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/sr5jjs9jvWKzJUYcqGWW/scores/',
@@ -29,6 +33,8 @@ const saveList = async (entry) => {
     },
   );
 };
+
+// Sumbit data to the form
 
 class Score {
   constructor(name, score) {
