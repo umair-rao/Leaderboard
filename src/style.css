@@ -1,7 +1,49 @@
-body {
-    background-color: rgb(241, 141, 19);
+.heading {
+  text-align: center;
 }
 
-.hello {
-	color: red;
-  }
+.board {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.title {
+  display: flex;
+}
+
+#refresh-btn {
+  background: transparent;
+  height: 30px;
+  margin-left: 30px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.recent-scores {
+  display: flex;
+  flex-direction: column;
+  padding-right: 7%;
+}
+
+.score-list {
+  border: 2px solid black;
+  width: 300px;
+}
+
+.score-list ul {
+  padding-left: 10px;
+}
+
+.score-list li {
+  list-style-type: none;
+  margin-top: 12px;
+}
+
+.add-score input {
+  margin-top: 10%;
+}
+
+#score-btn {
+  margin-top: 10%;
+}

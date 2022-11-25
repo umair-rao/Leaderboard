@@ -1,20 +1,57 @@
-import _ from 'lodash';
-import printMe from './print.js';
 import './style.css';
+import displayScores from './scoresList.js';
 
-function component() {
-	const element = document.createElement('div');
-	const btn = document.createElement('button');
-  
-	element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-	element.classList.add('hello');
+const refresh = document.querySelector('#refresh-btn');
+const form = document.querySelector('form');
 
-	btn.innerHTML = 'Click me and check the console!';
-	btn.onclick = printMe;
+// Get data from API
 
-	element.appendChild(btn);
-  
-	return element;
+const getScores = async () => {
+  await fetch(
+    'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/sr5jjs9jvWKzJUYcqGWW/scores',
+    { method: 'GET' },
+  )
+
+    .then((res) => res.json())
+    .then((data) => {
+      const list = data.result;
+      displayScores(list);
+    });
+};
+
+// Enter/Post data to the API
+
+const saveList = async (entry) => {
+  await fetch(
+    'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/sr5jjs9jvWKzJUYcqGWW/scores/',
+    {
+      method: 'POST',
+      headers: {
+        'Content-type': 'application/json; charset=UTF-8',
+      },
+      body: JSON.stringify(entry),
+    },
+  );
+};
+
+// Sumbit data to the form
+
+class Score {
+  constructor(name, score) {
+    this.user = name;
+    this.score = score;
   }
-  
-  document.body.appendChild(component());
+}
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const name = document.querySelector('#name').value;
+  const newScore = document.querySelector('#score').value;
+  const newEntry = new Score(name, newScore);
+  saveList(newEntry);
+  form.reset();
+});
+
+refresh.addEventListener('click', () => {
+  getScores();
+});
