@@ -11,5 +11,4 @@ const displayScores = (list) => {
     listContainer.appendChild(element);
   });
 };
-
 export default displayScores;
