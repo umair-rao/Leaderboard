@@ -1,3 +1,12 @@
+body {
+  background-color: #dcbde1;
+  font-size: 22px;
+}
+
+main {
+  margin-top: 8%;
+}
+
 .heading {
   text-align: center;
 }
@@ -6,6 +15,7 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
+  border-top: 2px solid black;
 }
 
 .title {
@@ -15,9 +25,10 @@
 #refresh-btn {
   background: transparent;
   height: 30px;
-  margin-left: 30px;
-  margin-top: 20px;
+  margin-left: 15px;
+  margin-top: 33px;
   cursor: pointer;
+  font-size: 22px;
 }
 
 .recent-scores {
@@ -42,8 +53,12 @@
 
 .add-score input {
   margin-top: 10%;
+  font-size: 22px;
 }
 
 #score-btn {
   margin-top: 10%;
+  font-size: 22px;
+  background: transparent;
+  cursor: pointer;
 }
