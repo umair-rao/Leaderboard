@@ -2,11 +2,6 @@
 
 > The leaderboard website displays scores submitted by different players. It also allows you to submit your score. Project is build with Webpack.
 
-
-## Built With
-
-- Webpack
-
 <a name="readme-top"></a>
 
 <!--
