@@ -7,8 +7,6 @@
 
 - Webpack
 
-## Authors
-=======
 <a name="readme-top"></a>
 
 <!--
