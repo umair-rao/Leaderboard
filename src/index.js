@@ -52,6 +52,7 @@ form.addEventListener('submit', (e) => {
   form.reset();
 });
 
+
 // Refresh button responsive
 
 refresh.addEventListener('click', () => {
